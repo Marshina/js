@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="libs.js"></script>
+
+</head>
+<body>
+
+  <script>
+
+var range = function(first, end) {
+  var arr = [];
+  if (end > first)
+    for (var i = first; i <= end; i++)
+      arr.push(i);
+  else
+    for (var j = first; j >= end; j--)
+      arr.push(j);
+  return arr;
+}
+
+
+var range2 = function(first, end, step) {
+  var arr = [];
+  if (end > first)
+    for (var i = first; i <= end; i = i + step)
+      arr.push(i);
+  else
+    for (var j = first; j >= end; j = j + step)
+      arr.push(j);
+  return arr;
+}
+
+var sum = function(arr) {
+  var sumVar = 0;
+  for (var i = 0; i < arr.length; i++)
+    sumVar = sumVar + arr[i];
+  return sumVar;
+}
+
+console.log(sum(range(1, 10)) + "\n");
+// → 55
+
+var array = range2(5, 2, -1);
+for (var i = 0; i < array.length; i++) {
+  console.log(array[i]);
+}
+
+// → [5, 4, 3, 2]
+
+</script>
+
+ <script src="test.js"></script>
+</body>
+</html>
