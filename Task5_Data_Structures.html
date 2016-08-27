@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="libs.js"></script>
+
+</head>
+<body>
+
+  <script>
+
+
+var range = function(first, end, step) {
+  var arr = [];
+    for (var i = first; step > 1 || step === undefined ? i <= end : i >= end; step ? i = i + step : i++)
+      arr.push(i);
+  return arr;
+}
+
+var sum = function(arr) {
+  var sumVar = 0;
+  for (var i = 0; i < arr.length; i++)
+    sumVar = sumVar + arr[i];
+  return sumVar;
+}
+
+console.log(sum(range(1, 10)) + "\n");
+// → 55
+
+var array = range2(5, 2, -1);
+for (var i = 0; i < array.length; i++) {
+  console.log(array[i]);
+}
+
+// → [5, 4, 3, 2]
+
+</script>
+
+ <script src="test.js"></script>
+</body>
+</html>
